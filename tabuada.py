@@ -27,4 +27,4 @@ for n1 in numbers:
     print(f'Tabuada do: {n1}')
     for n2 in numbers:
         print(f'{n1} x {n2} = {n1 * n2}')
-    print('\n-----------------\n')
+    print('-' * 20)
