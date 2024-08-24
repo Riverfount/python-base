@@ -10,7 +10,7 @@ Example:
     ./hello.py
     Hello, World!
 """
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 __author__ = 'Vicente Marçal'
 __license__ = 'GPLv3+'
 
@@ -18,16 +18,12 @@ import os
 
 current_local = os.getenv('LANG')[:5]
 
-msg = 'Hello, World!'
-
-if current_local == 'pt_BR':
-    msg = 'Olá, Mundo!'
-elif current_local == 'es_ES':
-    msg = '¡Hola, Mundo!'
-elif current_local == 'fr_FR':
-    msg = 'Bonjour, le monde!'
-elif current_local == 'it_IT':
-    msg = 'Ciao, mondo!'
+msg = {
+    'pt_BR': 'Olá, Mundo!',
+    'es_ES': '¡Hola, Mundo!',
+    'fr_FR': 'Bonjour, le monde!',
+    'it_IT': 'Ciao, mondo!'
+}.get(current_local, 'Hello, World!')
 
 print(msg)
 
