@@ -8,6 +8,9 @@ __license__ = 'GPLv3+'
 
 numbers = range(1, 11)
 for i in numbers:
+    print('{:-^20}'.format(f'Tabuada do {i}'))
+    print()
     for j in numbers:
-        print(f'{i} * {j} = {i * j}')
-    print('-' * 12)
+          print('{:^20}'.format(f'{i} x {j} = {i * j}'))
+    print()
+    print('#' * 20, '\n')
