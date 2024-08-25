@@ -16,7 +16,10 @@ __version__ = '0.1.0'
 __author__ = 'Vicente Marçal'
 __license__ = 'GPLv3+'
 
+import os
 import sys
+from datetime import datetime
+from pathlib import Path
 
 
 def sum_(a, b):
@@ -83,9 +86,14 @@ for num in nums:
     valid_nums.append(num)
 
 operand1, operand2 = valid_nums
-
-
 result = operations[operation](operand1, operand2)
 
+# Log the operation
+file_path = Path.cwd() / Path('prefix_calc.log')
+user = os.getenv('USER', 'anonymous')
+timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+with open(file_path, 'a') as file:
+    file.write(f'{timestamp} - {user.upper()} - {operation} {operand1} {operand2} = {result}\n')
 
+# Show the result to the user
 print(f'The result of {operation} {operand1} {operand2} is {result}')

@@ -22,7 +22,6 @@ __license__ = 'GPLv3+'
 import os
 import sys
 
-
 arguments = {'lang': None, 'count': 1}
 
 for arg in sys.argv[1:]:
