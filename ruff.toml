@@ -1,0 +1,10 @@
+target-version = 'py312'
+line-length = 120
+
+[lint]
+extend-select = ['I', 'F', 'E', 'W', 'PT']
+
+[format]
+quote-style = 'single'
+preview = true
+line-ending = 'lf'

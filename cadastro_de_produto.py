@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """Cadastro de produtos"""
+
 __version__ = '0.1.0'
 
 produto = {
@@ -12,12 +13,10 @@ produto = {
     },
     'em_estoque': True,
     'codigo': 45678,
-    'codebar': None
+    'codebar': None,
 }
 
-cliente = {
-    'nome': 'Bruno'
-}
+cliente = {'nome': 'Bruno'}
 
 compra = {
     'cliente': cliente,
@@ -28,6 +27,6 @@ compra = {
 total_compra = compra['quantidade'] * compra['produto']['preco']
 
 print(
-    f'O cliente: {compra["cliente"]["nome"]} comprou {compra["quantidade"]} {compra["produto"]["nome"]} '
+    f'O cliente: {compra['cliente']['nome']} comprou {compra['quantidade']} {compra['produto']['nome']} '
     f'por R$ {total_compra:.2f}'
 )

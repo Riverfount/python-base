@@ -3,6 +3,7 @@
 
 Imprimir a lista de criaças agrupadas por sala que frequentam cada uma das atividades.
 """
+
 __version__ = '0.1.2'
 
 # Dados
@@ -33,4 +34,3 @@ for disciplina, alunos in disciplinas.items():
     print('Sala 2:', disciplina_sala2)
     print()
     print('#' * 40)
-

@@ -6,7 +6,7 @@ This program prints out "Hello, World!" in multiple languages using the environm
 Example:
     Set the language by envinronment variable:
     export LANG=es_ES.UTF-8
-    
+
     Or by CLI argument:
     python hello.py --lang=es_ES
 
@@ -15,6 +15,7 @@ Example:
     ./hello.py
     Hello, World!
 """
+
 __version__ = '0.1.3'
 __author__ = 'Vicente Marçal'
 __license__ = 'GPLv3+'
@@ -45,8 +46,7 @@ msg = {
     'pt_BR': 'Olá, Mundo! ',
     'es_ES': '¡Hola, Mundo! ',
     'fr_FR': 'Bonjour, le monde! ',
-    'it_IT': 'Ciao, mondo! '
+    'it_IT': 'Ciao, mondo! ',
 }.get(current_language, 'Hello, World! ')
 
 print(msg * int(arguments['count']))
-

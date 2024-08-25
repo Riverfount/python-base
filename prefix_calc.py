@@ -12,6 +12,7 @@ Example of usage:
     python prefix_calc.py div 4 2
     2
 """
+
 __version__ = '0.1.0'
 __author__ = 'Vicente Marçal'
 __license__ = 'GPLv3+'
@@ -44,10 +45,7 @@ def div(a, b):
 arguments = sys.argv[1:]
 
 if len(arguments) != 3:
-    print(
-        'Invalid number of arguments.'
-        '\nExample of usage: \n$ python prefix_calc.py sum 1 2'
-    )
+    print('Invalid number of arguments.\nExample of usage:\n$ python prefix_calc.py sum 1 2')
     sys.exit(1)
 
 if not arguments:
@@ -60,12 +58,7 @@ operation, *nums = arguments
 
 valid_nums = []
 
-operations = {
-    'sum': sum_,
-    'sub': sub,
-    'mul': mul,
-    'div': div
-}
+operations = {'sum': sum_, 'sub': sub, 'mul': mul, 'div': div}
 
 if operation not in operations:
     print(
