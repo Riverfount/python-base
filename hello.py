@@ -26,8 +26,13 @@ import sys
 arguments = {'lang': None, 'count': 1}
 
 for arg in sys.argv[1:]:
-    # TODO: Tratar ValueError
-    key, value = arg.split('=')
+    try:
+        key, value = arg.split('=')
+    except ValueError as err:
+        print(f'Error: {err}')
+        print(f'Argument "{arg}" not recognized.')
+        print(f'Usage: {sys.argv[0]} --lang=es_ES --count=3')
+        sys.exit(1)
     key = key.lstrip('-').strip()
     value = value.strip()
     if key not in arguments:
